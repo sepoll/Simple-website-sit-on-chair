@@ -1,0 +1,366 @@
+* { /* rodzina fontów dla całej strony */
+    font-family: Calabri;
+}
+.gora { /* box zawierający górną nawigację */
+    width: 800px;
+    height: 30px;
+    background: black;
+    margin: 0 auto;
+    color: white;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+}
+.gora__one { /*box zawierający tekst*/
+    display: inline-block;
+    float: left;
+    margin-left: 50px;
+    margin-top: 8px;
+}
+.gora_left { /* to jest span "on" na zielono */
+    color: green;
+}
+
+#gora__two { /*box zawierający menu nawigacyjne*/
+    display: inline-block;
+    float: right;
+    width: 200px;
+    background: black;
+}
+#gora__two .menu, .menu2, .menu3{
+    display: inline-block;
+    position: relative;
+}
+
+#gora__two .menu__hover{
+    display: none;
+    position: absolute;
+    background: black;
+    list-style-type: none;
+}
+.middle { /*główny content box zawierający dwa równoległe boxy*/
+    color: black;
+    width: 800px;
+    height: 350px;
+    margin: 0 auto;
+    padding: 10px 0;
+    background: linear-gradient(to bottom, #f9f9f9 0%,#dce4e8 33%,#dce4e8 40%,#bfcbd3 100%,#666666 100%,#666666 100%,#bfcbd3 100%);
+}
+.middle__1 { /*box zawierający jako tło zdjęcie krzesła*/
+    height: 350px;
+    width: 400px;
+    float: left;
+    overflow: hidden;
+}
+.middle__1 .item{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.middle__2 .green{
+    color: green;
+}
+.middle__2 { /*box zawierający opis firmy równoległy do boxa z krzesłem*/
+    height: 350px;
+    width: 395px;
+    float: left;
+}
+.middle__2 h1{ /*modyfikacja nagłówka w boxie równoległym do krzesła*/
+    text-transform: uppercase;
+    text-align: center;
+}
+.middle__2 p{ /*modyfikacja paragrafu w boxie równoległym do krzesła*/
+    font-size: 10px;
+    margin-top: 40px;
+    margin-right: 10px;
+    text-align: center;
+    color: grey;
+    letter-spacing: .3px;
+}
+.middle__2 a{
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+.middle__2 div{
+    width: 200px;
+    height: 45px;
+    margin-left: 90px;
+    margin-top: 50px;
+    border-radius: 25px;
+    background: green;
+    font-family: Arial;
+}
+.content { /*content box zawierający trzy boxy*/
+    background: white;
+    height: 205px;
+    margin: 0 auto;
+    width: 800px;
+    position: relative;
+    padding: 5px 0;
+}
+.content__1 { /*box ze zdjęciem w tle*/
+    background: white;
+    height: 200px;
+    width: 260px;
+    border: 1px solid #5684A4;
+    position: absolute;
+    left: 0px;
+    background-image: url("../img/box1_img.jpg");
+    background-size: 100% 200px;
+}
+.content__2 { /*box ze zdjęciem w tle*/
+    background: white;
+    height: 200px;
+    width: 260px;
+    border: 1px solid #5684A4;
+    position: absolute;
+    left: 270px;
+    background-image: url("../img/box2_img.jpg");
+    background-size: 100% 200px;
+}
+.content__3 { /* box z opisem*/
+    background: white;
+    height: 200px;
+    width: 260px;
+    border: 1px solid #5684A4;
+    position: absolute;
+    right: 0px;
+}
+.content a{
+    text-decoration: none;
+    border: 5px green;
+    border-style: none none solid none;
+    color: black;
+    font-weight: bold;
+    margin: 20px;
+}
+.content nav{
+    margin-top: 150px;
+}
+.content h1{ /*modyfikacja nagłówka w boxie z opisem*/
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 12px;
+    border: 5px green;
+    border-style: none none solid none;
+}
+.content p{ /*modyfikacja paragrafu w boxie z opisem*/
+    color: grey;
+    font-size: 10px;
+    margin: 12px;
+}
+.cennik { /*content box z trzema boxami z cenami*/
+    padding: 0 0 0 0;
+    margin: 0 auto;
+    width: 800px;
+    height: 390px;
+    font-size: 10px;
+    position: relative;
+}
+.cennik h2{
+    text-transform: uppercase;
+    margin-left: 10px;
+    border: 5px green;
+    border-style: none none solid none;
+    color: black;
+    font-weight: bold;
+    width: 60px;
+}
+.cennik h1{
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 30px;
+}
+.cennik .cena{ /*trzy boxy równoległe modyfikowane wspólnie*/
+    border: 2px solid green;
+    border-radius: 25px 25px 25px 25px;
+    height: 320px;
+    width: 250px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    position: relative;
+}
+.cennik a{
+    font-size: 18px;
+    color: #5684A4;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 12px 0 0 12px;
+}
+.cennik .cena::after { /*pseudoelement w trzech boxach z cenami na samej górze umieszczony*/
+    content: " ";
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    top: -25px;
+    left: 100px;
+    background: white;
+    border: 2px solid green;
+    border-radius: 50% 50%;
+}
+.cena .round{ /*okrągły div w trzech boxach z cenami*/
+    width: 100px;
+    height: 100px;
+    border: 2px solid green;
+    border-radius: 50% 50%;
+    margin-left: 70px;
+    font-size: 30px;
+    background: #5684A4;
+}
+.cena span{
+    font-size: 10px;
+}
+.cena p{
+    text-align: center;
+}
+.cena ul{
+    font-size: 15px;
+    list-style-type: none;
+    margin-left: 0px;
+}
+.cena_middle{
+    background: #5684A4;
+    border: 1px solid black;
+}
+.cena .link{
+    background: white;
+    position: absolute;
+    bottom: 5px;
+    left: 70px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #5684A4;
+    border-radius: 25px;
+}
+.adres { /*content box z dwoma boxami adres i kontakt*/
+    width: 800px;
+    height: 400px;
+    margin: 0px auto;
+    position: relative;
+}
+.adres .kontakt { /*div z lewej w boxie adres*/
+    width: 500px;
+    height: 400px;
+    float: left;
+    margin-left: 10px;
+}
+.adres .submit { /*div z prawej w boxie adres*/
+    width: 265px;
+    height: 400px;
+    float: left;
+    margin-left: 10px;
+}
+.kontakt .form { /*input text z imieniem i nazwiskiem*/
+    width: 480px;
+    height: 50px;
+    margin: 10px;
+    font-size: 20px;
+}
+.kontakt .form_inf{ /*input text z wiadomością*/
+    width: 480px;
+    height: 150px;
+    margin: 10px;
+    font-size: 20px;
+}
+.submit a{/*przycisk dla formularza prześlij*/
+    font-size: 30px;
+    display: block;
+}
+.foot { /*stopka*/
+    width: 800px;
+    height: 40px;
+    margin: 0px auto;
+    position: relative;
+}
+.foot p{ /*modyfikacja paragrafu dla stopki*/
+    font-size: 10px;
+    color: grey;
+    display: block;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.foot h1{ /*modyfikacja nagłówka dla stopki*/
+    font-size: 10px;
+    color: grey;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+.foot div{ /*div zawierający zdjęcia społecznościowe*/
+    margin-left: 530px;
+    position: absolute;
+}
+.new select{
+    display: block;
+    width: 90%;
+    height: 20px;
+    margin: 10px;
+}
+#down{
+    display: inline-block;
+    width: 33%;
+    height: 220px;
+    border: 1px solid red;
+}
+#down button{
+    width: 50%;
+    margin-left: 20px;
+}
+#down1{
+    width: 250px;
+    height: 100px;
+    border: 1px solid red;
+    background: white;
+}
+#down2{
+    display: block;
+    width: 250px;
+    height: 30px;
+    border: 1px solid red;
+    background: white;
+}
+#inputs {
+    display: inline-block;
+    width: 33%;
+    border: 1px solid red;
+}
+#red{
+    width: 32%;
+    display: inline-block;
+    overflow: hidden;
+}
+#red img{
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+}
+.new{
+    border: 1px solid red;
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    background: lightgrey;
+    padding-top: 50px;
+}
+
+.new div {
+    vertical-align: middle;
+}
+.new h1{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 12px;
+    border: 5px green;
+    border-style: none none solid none;
+}
